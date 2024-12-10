@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            box-shadow: 10px 10px 100px 20px red;
+            border-radius: 50%;
+        }
+        .section{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 100px;
+            background-color: rgb(0, 0, 0);
+        }
+       
+        .hero{
+             
+            color: rgb(233, 244, 244);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="section">
+         
+<div class="hero">
+        <h1>Traffic Lights</h1>
+    </div>
+    
+        <div id="box" draggable="true">
+            
+        </div>
+         
+        </div>
+    </div>
+    <script>
+        const sunLight=()=>{
+            let sun=document.getElementById('box')
+            let sunTwo=document.getElementsByClassName('sunTwo')[0]
+
+           
+            
+            sun.addEventListener("click",()=>{
+            sun.style.boxShadow="10px 10px 100px 10px yellow";
+            sun.style.backgroundColor="yellow";
+            })
+            
+            sun.addEventListener("dblclick",()=>{
+            sun.style.boxShadow="10px 10px 100px 10px green";
+            sun.style.backgroundColor="green";
+            })
+
+          
+        }
+        sunLight()
+    </script>
+</body>
+</html>
